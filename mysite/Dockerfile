@@ -17,7 +17,8 @@ RUN echo https://mirror.yandex.ru/mirrors/alpine/v3.12/main/       > /etc/apk/re
     git \
     linux-headers \
     musl-dev \
-    openssh \
+    openssh \    
+    postgresql-dev \
     python3 \
     python3-dev \
     py3-pip \
@@ -37,7 +38,6 @@ RUN echo https://mirror.yandex.ru/mirrors/alpine/v3.12/main/       > /etc/apk/re
  && cd mysite \
  \
  && pip install -r requirements.txt \
- && pip3 install uwsgi==2.0.19 \
  && apk del \
  	gcc \
     git \

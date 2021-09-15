@@ -1,6 +1,4 @@
 mysite:
   image: mysite
-  ports:
-   - "8000:8000"
-  volumes:
-   - ./mysite:/mysite
+  net: "host"
+  
