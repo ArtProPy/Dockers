@@ -2,7 +2,7 @@ FROM alpine:3.13
 
 MAINTAINER Artem Protsenko <ArtProPy@gmail.com>
 
-ARG BRANCH main
+ENV BRANCH main
 
 ENV HOME /root
 
@@ -27,7 +27,6 @@ RUN echo https://mirror.yandex.ru/mirrors/alpine/v3.12/main/       > /etc/apk/re
  && mv "${HOME}"/id_rsa "${HOME}"/.ssh \
  && mv "${HOME}"/id_rsa.pub "${HOME}"/.ssh \
  && ssh-keyscan github.com > "${HOME}"/.ssh/known_hosts \
- \
  \
  && mkdir /var/www/ \
  && cd /var/www \
